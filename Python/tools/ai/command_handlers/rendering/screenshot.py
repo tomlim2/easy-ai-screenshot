@@ -81,10 +81,7 @@ class ScreenshotCommandHandler(BaseCommandHandler):
         if response and response.get("status") == "error":
             raise Exception(response.get("error", f"Unknown Unreal {command_type} error"))
         
-        # Wait a moment for file to be created
-        time.sleep(0.5)
-        
-        # Find newest screenshot file
+        # Find newest screenshot file (with retry mechanism)
         screenshot_file = self._find_newest_screenshot()
         
         if screenshot_file:
@@ -104,7 +101,7 @@ class ScreenshotCommandHandler(BaseCommandHandler):
             }
 
     def _find_newest_screenshot(self) -> Optional[Path]:
-        """Find the newest screenshot file in the WindowsEditor directory."""
+        """Find the newest screenshot file in the WindowsEditor directory with retry mechanism."""
         try:
             project_path = os.getenv('UNREAL_PROJECT_PATH')
             if not project_path:
@@ -118,17 +115,36 @@ class ScreenshotCommandHandler(BaseCommandHandler):
                 logger.warning(f"Screenshot directory not found: {screenshot_dir}")
                 return None
             
-            # Find all PNG files
-            png_files = list(screenshot_dir.glob("*.png"))
+            # Record current time to identify new files
+            start_time = time.time()
+            max_attempts = 10
+            wait_interval = 1.0
             
-            if not png_files:
-                logger.warning("No PNG files found in screenshot directory")
-                return None
+            for attempt in range(max_attempts):
+                # Find all PNG files
+                png_files = list(screenshot_dir.glob("*.png"))
+                
+                if png_files:
+                    # Look for files created after we started waiting
+                    recent_files = [f for f in png_files if f.stat().st_mtime >= start_time - 1]
+                    
+                    if recent_files:
+                        # Return the newest recent file
+                        newest_file = max(recent_files, key=lambda f: f.stat().st_mtime)
+                        logger.info(f"Found newest screenshot: {newest_file.name} (attempt {attempt + 1})")
+                        return newest_file
+                    elif attempt == 0:
+                        # On first attempt, also check if there are any existing files
+                        newest_file = max(png_files, key=lambda f: f.stat().st_mtime)
+                        logger.info(f"Found existing screenshot: {newest_file.name}")
+                        return newest_file
+                
+                if attempt < max_attempts - 1:
+                    logger.info(f"Screenshot not ready yet, waiting... (attempt {attempt + 1}/{max_attempts})")
+                    time.sleep(wait_interval)
             
-            # Return the newest file by modification time
-            newest_file = max(png_files, key=lambda f: f.stat().st_mtime)
-            logger.info(f"Found newest screenshot: {newest_file.name}")
-            return newest_file
+            logger.warning(f"No screenshot found after {max_attempts} attempts ({max_attempts * wait_interval}s)")
+            return None
             
         except Exception as e:
             logger.error(f"Error finding newest screenshot: {e}")
