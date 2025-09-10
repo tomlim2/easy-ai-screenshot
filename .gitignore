@@ -1,0 +1,182 @@
+# Unreal MCP
+Python/unreal_mcp.log
+
+# AI-related files
+.cursorrules
+.cursorignore
+CLAUDE.md
+CLAUDE.local.md
+
+# Code-copy related files
+.codeignore
+*codeclip*
+
+# Python-generated files
+__pycache__/
+__pycache__.meta
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Unity Editor
+*.unitypackage
+*.asset
+
+# IDE
+.idea/
+.vscode/
+
+# Unreal Engine generated files
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Content/StarterContent/
+
+# Visual Studio files
+.vs/
+*.vspscc
+*.vssscc
+*.suo
+*.csproj.user
+*.vcxproj.user
+*.vcproj.user
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+
+# Rider files
+*.sln.iml
+
+# Compiled source files
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.exp
+*.pdb
+*.ilk
+*.aps
+*.ncb
+
+# Compiled Python files
+*.py[cod]
+*$py.class
+.Python
+
+# Python virtual environments
+venv/
+ENV/
+.env
+env/
+env.bak/
+venv.bak/
+
+# Packaging
+Packaged/
+*.zip
+*.7z
+*.tar.gz
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Project specific files
+MCPGAMEProject/Config/DefaultEditorPerProjectUserSettings.ini
+
+# MCP specific files
+MCP/logs/
+MCP/temp/
+*.mcp.json
+
+# Unreal Engine 5 specific
+.uproject.DotSettings.user
+*.VC.db-*
+*.VC.*.db-*
+
+# Large media files
+Content/Movies/
+Content/Audio/
+*.uasset
+*.umap
+*.mp4
+*.mp3
+*.wav
+*.psd
+*.tga
+*.exr
+*.hdr
+
+# Exception for .gitkeep files
+!**/[Bb]inaries/**/.gitkeep
+!**/[Bb]uild/**/.gitkeep
+
+# Exceptions for tracking certain binaries if needed
+# !Binaries/Win64/MyImportantDLL.dll
+
+# Backup files
+*.bak
+*.backup
+*.TMP
+*.temp
+Backup/ 
+
+#
+UNREAL/Source/
+UNREAL/SOURCE/
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

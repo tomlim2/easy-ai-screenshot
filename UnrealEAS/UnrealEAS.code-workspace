@@ -1,0 +1,613 @@
+{
+	"folders": [
+		{
+			"name": "UnrealEAS",
+			"path": "."
+		},
+		{
+			"name": "UE5",
+			"path": "C:\\UnrealEngine\\UE_5.3"
+		}
+	],
+	"settings": {
+		"typescript.tsc.autoDetect": "off",
+		"npm.autoDetect": "off"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-vscode.cpptools",
+			"ms-dotnettools.csharp"
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "UnrealEAS Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEAS Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEAS Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEAS Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Test Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Test",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Test Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Test",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEAS Win64 Test Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Test Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Test",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Shipping Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Shipping",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Shipping Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Shipping",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEAS Win64 Shipping Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEAS Win64 Shipping Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEAS",
+					"Win64",
+					"Shipping",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Debug Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Debug Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEASEditor Win64 Debug Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Debug Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Debug",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 DebugGame Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 DebugGame Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEASEditor Win64 DebugGame Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 DebugGame Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"DebugGame",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Development Build",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Development Rebuild",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Build.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"dependsOn": [
+					"UnrealEASEditor Win64 Development Clean"
+				],
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"label": "UnrealEASEditor Win64 Development Clean",
+				"group": "build",
+				"command": "Engine\\Build\\BatchFiles\\Clean.bat",
+				"args": [
+					"UnrealEASEditor",
+					"Win64",
+					"Development",
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-waitmutex"
+				],
+				"problemMatcher": "$msCompile",
+				"type": "shell",
+				"options": {
+					"cwd": "C:\\UnrealEngine\\UE_5.3"
+				}
+			}
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Launch UnrealEAS (Debug)",
+				"request": "launch",
+				"program": "D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+				"preLaunchTask": "UnrealEAS Win64 Debug Build",
+				"args": [
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEAS (DebugGame)",
+				"request": "launch",
+				"program": "D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+				"preLaunchTask": "UnrealEAS Win64 DebugGame Build",
+				"args": [
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEAS (Development)",
+				"request": "launch",
+				"program": "D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\Binaries\\Win64\\UnrealGame.exe",
+				"preLaunchTask": "UnrealEAS Win64 Development Build",
+				"args": [
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEAS (Test)",
+				"request": "launch",
+				"program": "D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+				"preLaunchTask": "UnrealEAS Win64 Test Build",
+				"args": [
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEAS (Shipping)",
+				"request": "launch",
+				"program": "D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+				"preLaunchTask": "UnrealEAS Win64 Shipping Build",
+				"args": [
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEASEditor (Debug)",
+				"request": "launch",
+				"program": "C:\\UnrealEngine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+				"preLaunchTask": "UnrealEASEditor Win64 Debug Build",
+				"args": [
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject"
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEASEditor (DebugGame)",
+				"request": "launch",
+				"program": "C:\\UnrealEngine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+				"preLaunchTask": "UnrealEASEditor Win64 DebugGame Build",
+				"args": [
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject"
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Launch UnrealEASEditor (Development)",
+				"request": "launch",
+				"program": "C:\\UnrealEngine\\UE_5.3\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+				"preLaunchTask": "UnrealEASEditor Win64 Development Build",
+				"args": [
+					"D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject"
+				],
+				"cwd": "C:\\UnrealEngine\\UE_5.3",
+				"stopAtEntry": false,
+				"console": "externalTerminal",
+				"type": "cppvsdbg",
+				"visualizerFile": "C:\\UnrealEngine\\UE_5.3\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+				"sourceFileMap": {
+					"D:\\build\\++UE5\\Sync": "C:\\UnrealEngine\\UE_5.3"
+				}
+			},
+			{
+				"name": "Generate Project Files",
+				"type": "coreclr",
+				"request": "launch",
+				"preLaunchTask": "UnrealBuildTool Win64 Development Build",
+				"program": "C:\\UnrealEngine\\UE_5.3\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+				"args": [
+					"-projectfiles",
+					"-vscode",
+					"-project=D:\\vs\\unreal-mcp\\easy-ai-screenshot\\UnrealEAS\\UnrealEAS.uproject",
+					"-game",
+					"-engine",
+					"-dotnet"
+				],
+				"console": "externalTerminal",
+				"stopAtEntry": false,
+				"cwd": "C:\\UnrealEngine\\UE_5.3"
+			}
+		]
+	}
+}

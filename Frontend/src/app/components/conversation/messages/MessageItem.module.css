@@ -1,0 +1,677 @@
+.message {
+  width: 100%;
+  word-wrap: break-word;
+  border: none;
+}
+
+.message.user {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  align-self: flex-end;
+  margin-left: auto;
+  margin: 3rem 0 1rem 0;
+  max-width: 400px;
+  width: auto;
+  border-radius: 18px;
+  text-align: left;
+  border: 1px solid #404040;
+  padding: 12px 16px;
+}
+
+.message.assistant {
+  padding: 15px 0;
+  color: #ffffff;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.message.system {
+  background-color: #f5f5f5;
+  color: #4a4a4a;
+  align-self: center;
+  max-width: 70%;
+  text-align: center;
+  padding: 15px 20px;
+}
+
+.message.combined {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  width: 100%;
+}
+
+/* Debug Header Styles */
+.debugHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyButton {
+  background-color: #2d5a2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+.copyButton:hover {
+  background-color: #1e3f20;
+}
+
+.debugContent {
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 0;
+  overflow-x: auto;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #c9d1d9;
+}
+
+.debugBlock {
+  margin-bottom: 20px;
+}
+
+.debugBlock:last-child {
+  margin-bottom: 0;
+}
+
+.debugLabel {
+  color: #79c0ff;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #21262d;
+  padding-bottom: 4px;
+}
+
+.debugValue {
+  color: #a5d6ff;
+  background-color: #0d1117;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #21262d;
+  font-style: italic;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.debugJson {
+  color: #c9d1d9;
+  background-color: #0d1117;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #21262d;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.debugError {
+  color: #ff7b72;
+  background-color: #0d1117;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #21262d;
+  font-weight: bold;
+}
+
+/* Tab Container */
+.tabContainer {
+  margin: 15px 0 0 0;
+}
+
+.tabButtons {
+  display: flex;
+  border-bottom: 1px solid #444;
+  margin-bottom: 0;
+}
+
+.tabButton {
+  background-color: #2a2a2a;
+  color: #ccc;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  border-top: 1px solid #444;
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+  border-bottom: 1px solid #444;
+  margin-right: 2px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tabButton:hover {
+  background-color: #3a3a3a;
+  color: #fff;
+}
+
+.tabButton.activeTab {
+  background-color: #1e1e1e;
+  color: #fff;
+  border-bottom: 1px solid #1e1e1e;
+  z-index: 1;
+}
+
+.tabContent {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-top: none;
+  padding: 20px;
+  margin-bottom: 15px;
+}
+
+/* Response Tab */
+.responseTab {
+  /* Inherits styles from existing sections */
+}
+
+/* Debug Tab */
+.debugTab {
+  /* Keep existing debug styles but remove the wrapper background */
+}
+
+.debugTab .debugHeader {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.triggerContent.success {
+  border-left: 12px solid #4caf50;
+}
+
+.triggerContent.failure {
+  border-left: 12px solid #f44336;
+}
+
+/* Status Circle Styles */
+.statusCircle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.successCircle {
+  background-color: #4caf50;
+}
+
+.failureCircle {
+  background-color: #f44336;
+}
+
+.resultHeader {
+  display: flex;
+  align-items: center;
+}
+
+.commandName {
+  font-weight: 500;
+}
+
+.imageHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.generatedImagesSection {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
+}
+
+.messageHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sessionName {
+  font-size: 0.95rem;
+  color: #666666;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  background: #cccccc;
+  padding: 2px 6px;
+  font-weight: normal;
+}
+
+.role {
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 4px 8px;
+  letter-spacing: 0.5px;
+}
+
+.message.user .role {
+  background-color: #666666;
+  color: #ffffff;
+}
+
+.message.assistant .role {
+  background-color: #cccccc;
+  color: #333333;
+}
+
+.message.system .role {
+  background-color: #cccccc;
+  color: #4a4a4a;
+}
+
+.timestamp {
+  font-size: 0.95rem;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.message.user .timestamp {
+  color: #cccccc;
+}
+
+.message.assistant .timestamp {
+  color: #666666;
+}
+
+.message.system .timestamp {
+  color: #4a4a4a;
+}
+
+.toggleButton {
+  background: #cccccc;
+  color: inherit;
+  border: none;
+  width: 20px;
+  height: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', monospace;
+  min-width: 20px;
+}
+
+.toggleButton:hover {
+  background: #999999;
+}
+
+
+.message.user .toggleButton {
+  background: #666666;
+  color: #ffffff;
+}
+
+.message.user .toggleButton:hover {
+  background: #999999;
+}
+
+.content {
+  line-height: 1.5;
+  margin-top: 12px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.messageContent {
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.95rem;
+}
+
+
+.message.user .messageContent {
+  font-size: 0.95rem;
+}
+
+.message.user .content {
+  color: #ffffff;
+}
+
+.message.assistant .content {
+  color: #000000;
+}
+
+.message.system .content {
+  color: #4a4a4a;
+}
+
+.triggerContent {
+  padding: 12px;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  font-size: 0.95rem;
+  border: none;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.triggerContent:hover {
+  background-color: #3a3a3a;
+}
+
+.responseContent {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 0.95rem;
+  border: none;
+  line-height: 1.5;
+}
+
+.aiSection {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.aiSection strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #cccccc;
+  margin-bottom: 4px;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.aiSection p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.commands {
+  margin-top: 16px;
+}
+
+.commands strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #cccccc;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.command {
+  margin: 12px 0;
+  padding: 0;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Consolas', 'Courier New', monospace !important;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #e6e6e6;
+  background: #1a1a1a;
+  border-radius: 8px;
+  border: 1px solid #333;
+  overflow: hidden;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.commandHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: #333;
+  border-bottom: 1px solid #444;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.command strong {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Consolas', 'Courier New', monospace !important;
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: none;
+  margin: 0;
+}
+
+.languageLabel {
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Consolas', 'Courier New', monospace !important;
+  font-size: 0.95rem;
+  color: #999;
+  font-weight: normal;
+}
+
+.commandContent {
+  padding: 16px;
+  overflow-x: auto;
+  margin: 0;
+}
+
+.command pre {
+  margin: 0;
+  padding: 16px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Consolas', 'Courier New', monospace !important;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #e6e6e6;
+  background: #484848;
+  border-radius: 6px;
+  border: 1px solid #333;
+  overflow-x: auto;
+  white-space: pre;
+  tab-size: 2;
+}
+
+.results {
+  margin-top: 16px;
+}
+
+.results strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #cccccc;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.result {
+  margin: 12px 0;
+}
+
+.resultHeader {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.resultData {
+  margin: 0;
+  padding: 12px;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #ffffff;
+  background: #2a2a2a;
+  overflow-x: auto;
+}
+
+.errorMessage {
+  color: #ff6b6b;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin: 8px 0;
+}
+
+.screenshotContainer {
+  margin-top: 12px;
+  background: #2a2a2a;
+  border: 1px solid #666666;
+  border-radius: 4px;
+  width: 100%;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screenshot {
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  object-fit: contain;
+}
+
+.screenshotError {
+  padding: 8px 16px;
+  color: #cccccc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.errorText {
+  line-height: 1.4;
+}
+
+.errorText strong {
+  color: #ffffff;
+}
+
+.errorText small {
+  color: #999999;
+  font-size: 0.95rem;
+}
+
+.retryButton {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 500;
+  align-self: flex-start;
+  text-decoration: underline;
+}
+
+.retryButton:hover {
+  color: #cccccc;
+}
+
+.transformationDetails {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #444444;
+  width: 100%;
+}
+
+.styleInfo {
+  color: #888888;
+  font-size: 0.85rem;
+  font-style: italic;
+  display: block;
+}
+
+.retryButton:active {
+  color: #999999;
+}
+
+/* Always visible images (outside collapsed content) */
+.alwaysVisibleImages {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.alwaysVisibleImages strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #cccccc;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.imageContainer {
+  margin-bottom: 0;
+}
+
+/* Message preview in header */
+.messagePreview {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+/* System message specific styles */
+.roleLabel {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 8px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expandIcon {
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.expandIcon:hover {
+  color: #ffffff;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #444444;
+  border-radius: 2px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}

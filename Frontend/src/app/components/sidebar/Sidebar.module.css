@@ -1,0 +1,231 @@
+.container {
+  background-color: #000000;
+  color: #ffffff;
+  padding: .5rem;
+  width: 320px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 12px;
+  border-bottom: 1px solid #333333;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  text-align: left;
+  letter-spacing: -0.025em;
+  font-family: var(--font-bodoni-moda), 'Times New Roman', Times, serif;
+}
+
+.description {
+  font-size: 0.8125rem;
+  color: #999999;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+
+.error {
+  background-color: #2a2a2a;
+  border: 1px solid #666666;
+  padding: 16px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.retryButton {
+  margin-left: 10px;
+  padding: 4px 12px;
+  background: #666666;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.retryButton:hover {
+  background: #333333;
+}
+
+.sessionList {
+  margin: 0;
+  border: none;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+
+.noSessions {
+  text-align: center;
+  padding: 40px;
+  color: #666666;
+  font-style: italic;
+}
+
+.newSessionButton {
+  padding: 8px 12px;
+  background: transparent;
+  color: #cccccc;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 400;
+  width: 100%;
+  text-align: left;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+}
+
+.newSessionButton:hover {
+  color: #ffffff;
+  background-color: #2a2a2a;
+}
+
+.refreshButton {
+  padding: 10px 16px;
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.refreshButton:hover {
+  background: #666666;
+}
+
+.sessionControls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.recentSection {
+  margin-top: 20px;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.recentTitle {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+  color: #999999;
+}
+
+.addSessionForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sessionNameInput {
+  padding: 12px;
+  border: none;
+  background: #2a2a2a;
+  color: #ffffff;
+  font-size: 0.95rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.sessionNameInput:focus {
+  outline: none;
+  background: #404040;
+}
+
+.sessionNameInput:disabled {
+  background-color: #1a1a1a;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.refreshButton.loading {
+  background-color: #666666;
+  cursor: wait;
+}
+
+.charCount {
+  font-size: 0.95rem;
+  color: #666666;
+  text-align: right;
+}
+
+.deleteButton {
+  background-color: #ffffff !important;
+  margin-top: 8px;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background-color: #ffffff !important;
+}
+
+.deleteButton:disabled {
+  background-color: #1a1a1a !important;
+  color: #666666 !important;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.todoTitle {
+  font-size: 0.8rem;
+  color: #cccccc;
+  padding: 12px 12px 8px 12px;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoItem {
+  font-size: 0.75rem;
+  color: #666666;
+  padding: 4px 12px;
+  line-height: 1.4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  position: relative;
+}
+
+.todoItem:before {
+  content: "•";
+  color: #999999;
+  margin-right: 8px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #666666;
+  padding: 12px;
+  margin: 0;
+  line-height: 1.4;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+

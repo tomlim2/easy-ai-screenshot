@@ -1,0 +1,136 @@
+.container {
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  margin: 0px auto;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.refreshButton {
+  background: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.refreshButton:hover {
+  background: #666666;
+}
+
+
+.error {
+  background-color: #cccccc;
+  border: 1px solid #666666;
+  padding: 20px;
+  color: #000000;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #999999;
+  font-size: 2rem;
+  font-family: var(--font-bodoni-moda), 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.sessionInfo {
+  background: #333333;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.sessionInfo h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+}
+
+.sessionMeta {
+  font-size: 0.95rem;
+  color: #cccccc;
+  font-family: 'Inter', 'SF Mono', 'Monaco', 'Inconsolata', monospace;
+}
+
+.section {
+  margin: 0;
+  padding: 1rem 0 11.5rem 0;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  align-items: center;
+}
+
+.section h4 {
+  background-color: #cccccc;
+  margin: 0;
+  padding: 16px 20px;
+  color: #000000;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.empty {
+  padding: 40px;
+  text-align: center;
+  color: #666666;
+  font-style: italic;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+  scrollbar-color: #cccccc transparent;
+  height: 100%;
+  width: 800px;
+  box-sizing: border-box;
+}
+
+.spacer {
+  flex: 1;
+  min-height: 1px;
+}
+
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #cccccc;
+  border-radius: 3px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
