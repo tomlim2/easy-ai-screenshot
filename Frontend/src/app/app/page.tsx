@@ -6,6 +6,7 @@ import ChatInput from "../components/chat/ChatInput";
 import { useSessionContext } from "./layout";
 import ConversationHistory from "../components/conversation/ConversationHistory";
 import { createApiService } from "../services";
+import UnrealTestPanel from "../components/UnrealTestPanel";
 import styles from "../components/SessionManagerPanel.module.css";
 
 export default function AppHome() {
@@ -49,6 +50,12 @@ export default function AppHome() {
           <button onClick={() => setError(null)}>×</button>
         </div>
       )}
+      
+      {/* Add Unreal Test Panel at the top for debugging */}
+      <div className="p-4">
+        <UnrealTestPanel className="mb-6" />
+      </div>
+      
       <ConversationHistory 
         context={null}
         loading={false}

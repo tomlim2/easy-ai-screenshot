@@ -19,4 +19,17 @@ public:
 	{
 		return FModuleManager::Get().IsModuleLoaded("UnrealMCP");
 	}
+
+private:
+	/** Register menu extensions */
+	void RegisterMenuExtensions();
+
+	/** Unregister menu extensions */
+	void UnregisterMenuExtensions();
+
+	/** Called when tool menus are loaded */
+	void OnToolMenusLoaded();
+
+	/** Static callback for opening AI Screenshot Tool */
+	static void OnOpenAIScreenshotTool();
 }; 

@@ -34,7 +34,8 @@ public class UnrealMCP : ModuleRules
 				"HTTP",
 				"Json",
 				"JsonUtilities",
-				"DeveloperSettings"
+				"DeveloperSettings",
+				"WebBrowser"
 				// ... add other public dependencies that you statically link with here ...
 			}
 		);
@@ -56,7 +57,13 @@ public class UnrealMCP : ModuleRules
 				"PropertyEditor",
 				"Projects",
 				"AssetRegistry",
-				"ContentBrowser"
+				"ContentBrowser",
+				"WebBrowserWidget",
+				"WorkspaceMenuStructure",
+				"EditorStyle",
+				"ToolMenus",
+				"LevelEditor",
+				"HTTP"
 				// ... add private dependencies that you statically link with here ...	
 			}
 		);
